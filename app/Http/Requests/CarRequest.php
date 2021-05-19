@@ -24,7 +24,7 @@ class CarRequest extends FormRequest
     public function rules()
     {
         return [
-            'carName'   => 'required|unique:cars,name',
+            'carName'   => 'required|unique:cars,name,'.$this->id,
             'carPrice'  => 'required|numeric',
             'carStock'  => 'required|numeric'
         ];
